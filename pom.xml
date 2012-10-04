@@ -1,0 +1,403 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <!-- <parent>
+  <artifactId>ow2</artifactId>
+  <groupId>org.ow2</groupId>
+  <version>1.5</version> 
+  </parent> -->
+
+  <modelVersion>4.0.0</modelVersion>
+  <prerequisites>
+    <maven>2.2.1</maven>
+  </prerequisites>
+
+  <name>Play Parent</name>
+  <artifactId>play-parent</artifactId>
+  <groupId>org.ow2.play</groupId>
+  <packaging>pom</packaging>
+
+  <version>1.0-SNAPSHOT</version>
+
+  <organization>
+    <name>Play FP7</name>
+    <url>http://research.petalslink.org</url>
+  </organization>
+
+  <inceptionYear>2011</inceptionYear>
+  <url>http://www.play-project.eu</url>
+  <description>PLAY will revolutionize the way People, Things and
+    Services will cooperate and coexist in the Future Internet, by
+    introducing ubiquity in the communication and proactivity in handling
+    large scale distributed environments.</description>
+
+  <mailingLists>
+    <mailingList>
+      <name>PLAY Mailing List</name>
+      <subscribe>petalsdsb-subscribe@lists.petalslink.org</subscribe>
+      <post>petalsdsb@lists.petalslink.org</post>
+      <unsubscribe>petalsdsb-unsubscribe@lists.petalslink.org</unsubscribe>
+      <archive>http://lists.petalslink.org/pipermail/petalsdsb/</archive>
+    </mailingList>
+  </mailingLists>
+
+  <ciManagement>
+    <system>Bamboo</system>
+    <url>http://bamboo.ow2.org</url>
+  </ciManagement>
+
+  <issueManagement>
+    <url>http://jira.ow2.org/browse/PLAY</url>
+  </issueManagement>
+
+  <licenses>
+    <license>
+      <name>GNU LESSER GENERAL PUBLIC LICENSE Version 2.1</name>
+      <url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Christophe Hamerling</name>
+      <id>chamerling</id>
+      <email>christophe.hamerling@petalslink.com</email>
+      <url>http://chamerling.org</url>
+      <organization>Linagora</organization>
+      <organizationUrl>
+        http://www.linagora.com
+      </organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
+  <contributors>
+  </contributors>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cobertura.version>2.0-beta1</cobertura.version>
+    <site.version>2.3</site.version>
+    <mprojectinfo.version>2.0-beta-3</mprojectinfo.version>
+    <umlgraph.version>4.6</umlgraph.version>
+    <cxf.version>2.5.0</cxf.version>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>petalslink-public.release</id>
+      <name>PetalsLink Public Repository</name>
+      <url>http://maven.petalslink.com/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>petalslink-public.snapshot</id>
+      <name>PetalsLink Snapshot Public Repository</name>
+      <url>http://maven.petalslink.com/public-snapshot</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>ebmws-public.research</id>
+      <url>http://maven.petalslink.com/public-research</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>petalslink-public.others</id>
+      <url>http://maven.petalslink.com/others</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>ow2-public.release</id>
+      <name>OW2 Public Repository</name>
+      <url>http://maven.ow2.org/maven2</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>ow2-public.snapshot</id>
+      <name>OW2 Snapshot Repository</name>
+      <url>http://maven.ow2.org/maven2-snapshot</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>ow2.release</id>
+      <name>OW2 Repository</name>
+      <url>http://repository.ow2.org/nexus/content/repositories/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>ow2.snapshot</id>
+      <name>OW2 Snap Repository</name>
+      <url>http://repository.ow2.org/nexus/content/repositories/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>petalslink-public.snapshot.plugin</id>
+      <name>PetalsLink plugin Repository</name>
+      <url>http://maven.petalslink.com/public-snapshot</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>petalslink-public.release.plugin</id>
+      <name>PetalsLink plugin release Repository</name>
+      <url>http://maven.petalslink.com/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>petalslink-public.others.plugin</id>
+      <name>PetalsLink plugin others Repository</name>
+      <url>http://maven.petalslink.com/others</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>findbugs</groupId>
+      <artifactId>annotations</artifactId>
+      <version>1.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.easymock</groupId>
+        <artifactId>easymock</artifactId>
+        <version>2.2</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.easymock</groupId>
+        <artifactId>easymockclassextension</artifactId>
+        <version>2.2</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.13</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>1.2</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.0.4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-bundle-minimal</artifactId>
+        <version>${cxf.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.1</version>
+          <configuration>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <addExtensions />
+                <classpathPrefix />
+              </manifest>
+              <manifestEntries>
+                <mode>development</mode>
+                <url>${pom.url}</url>
+                <SCM-Revision>${buildNumber}</SCM-Revision>
+                <Build-Date />
+              </manifestEntries>
+            </archive>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+          <configuration>
+            <source>1.5</source>
+            <target>1.5</target>
+            <showDeprecation>true</showDeprecation>
+            <showWarnings>
+              ${java.compiler.showWarnings}
+            </showWarnings>
+            <fork>false</fork>
+            <debug>${java.compiler.debug}</debug>
+            <optimize>${java.compiler.optimize}</optimize>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+          <addGroupIdToProjectName>true</addGroupIdToProjectName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+          <links>
+            <link>http://ow2.org</link>
+          </links>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <java.compiler.showWarnings>true</java.compiler.showWarnings>
+        <java.compiler.debug>true</java.compiler.debug>
+        <java.compiler.optimize>false</java.compiler.optimize>
+      </properties>
+    </profile>
+    <profile>
+      <id>release</id>
+      <activation>
+        <!-- Automatically activated by the release plugin -->
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
+        <java.compiler.showWarnings>
+          false
+        </java.compiler.showWarnings>
+        <java.compiler.debug>false</java.compiler.debug>
+        <java.compiler.optimize>true</java.compiler.optimize>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.4</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  <scm>
+    <connection>scm:git:git@github.com:play-project/play-parent.git</connection>
+    <developerConnection>scm:git:git@github.com:play-project/play-parent.git</developerConnection>
+    <url>http://github.com/play-project/play-parent</url>
+  </scm>
+</project>
