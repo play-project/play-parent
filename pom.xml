@@ -1,42 +1,46 @@
+<?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <!-- <parent>
-  <artifactId>ow2</artifactId>
-  <groupId>org.ow2</groupId>
-  <version>1.5</version> 
-  </parent> -->
+  <parent>
+    <artifactId>ow2</artifactId>
+    <groupId>org.ow2</groupId>
+    <version>1.5</version> 
+  </parent>
 
-  <modelVersion>4.0.0</modelVersion>
-  <prerequisites>
-    <maven>2.2.1</maven>
-  </prerequisites>
+	<name>play-parent</name>
+	<artifactId>play-parent</artifactId>
+	<groupId>org.ow2.play</groupId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
 
-  <name>Play Parent</name>
-  <artifactId>play-parent</artifactId>
-  <groupId>org.ow2.play</groupId>
-  <packaging>pom</packaging>
+	<description>
+    PLAY will revolutionize the way People, Things and Services will cooperate and coexist in the Future Internet, by introducing ubiquity in the communication and proactivity in handling large scale distributed environments.
+  </description>
+	
+  <url>http://play.ow2.org</url>
 
-  <version>1.0-SNAPSHOT</version>
-
-  <organization>
-    <name>Play FP7</name>
-    <url>http://research.petalslink.org</url>
-  </organization>
-
-  <inceptionYear>2011</inceptionYear>
-  <url>http://www.play-project.eu</url>
-  <description>PLAY will revolutionize the way People, Things and
-    Services will cooperate and coexist in the Future Internet, by
-    introducing ubiquity in the communication and proactivity in handling
-    large scale distributed environments.</description>
-
+	<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cobertura.version>2.0-beta1</cobertura.version>
+    <site.version>2.3</site.version>
+    <mprojectinfo.version>2.0-beta-3</mprojectinfo.version>
+    <umlgraph.version>4.6</umlgraph.version>
+    <cxf.version>2.5.0</cxf.version>
+		<eclipse.shortGroupId>play</eclipse.shortGroupId>
+	</properties>
+  
+	<prerequisites>
+		<maven>2.2.1</maven>
+	</prerequisites>
+  
   <mailingLists>
     <mailingList>
       <name>PLAY Mailing List</name>
-      <subscribe>petalsdsb-subscribe@lists.petalslink.org</subscribe>
-      <post>petalsdsb@lists.petalslink.org</post>
-      <unsubscribe>petalsdsb-unsubscribe@lists.petalslink.org</unsubscribe>
+      <subscribe>play-dev-subscribe@ow2.org</subscribe>
+      <post>play-dev@ow2.org</post>
+      <unsubscribe>play-dev-unsubscribe@ow2.org</unsubscribe>
       <archive>http://lists.petalslink.org/pipermail/petalsdsb/</archive>
     </mailingList>
   </mailingLists>
@@ -50,18 +54,20 @@
     <url>http://jira.ow2.org/browse/PLAY</url>
   </issueManagement>
 
-  <licenses>
-    <license>
-      <name>GNU LESSER GENERAL PUBLIC LICENSE Version 2.1</name>
-      <url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
-    </license>
-  </licenses>
+	<licenses>
+		<license>
+			<name>Lesser General Public License (LGPL)</name>
+			<url>http://www.gnu.org/copyleft/lesser.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
+	<!-- TODO: to be updated by each developer to put his name -->
   <developers>
     <developer>
       <name>Christophe Hamerling</name>
       <id>chamerling</id>
-      <email>christophe.hamerling@petalslink.com</email>
+      <email>chamerling@linagora.com</email>
       <url>http://chamerling.org</url>
       <organization>Linagora</organization>
       <organizationUrl>
@@ -69,283 +75,439 @@
       </organizationUrl>
       <roles>
         <role>Developer</role>
+        <role>Architect</role>
       </roles>
       <timezone>+1</timezone>
     </developer>
+		<developer>
+			<id>team</id>
+			<name>Play Project</name>
+			<email>play-project@fzi.de</email>
+			<url>http://www.play-project.eu/</url>
+			<organization>Play Project</organization>
+			<organizationUrl>http://www.play-project.eu/</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
   </developers>
 
-  <contributors>
-  </contributors>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>xmlunit</groupId>
+			<artifactId>xmlunit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <cobertura.version>2.0-beta1</cobertura.version>
-    <site.version>2.3</site.version>
-    <mprojectinfo.version>2.0-beta-3</mprojectinfo.version>
-    <umlgraph.version>4.6</umlgraph.version>
-    <cxf.version>2.5.0</cxf.version>
-  </properties>
+	<repositories>
+		<!-- <repository> -->
+		<!-- <id>maven-central</id> -->
+		<!-- <url>http://central.maven.org/maven2/</url> -->
+		<!-- <releases> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </releases> -->
+		<!-- <snapshots> -->
+		<!-- <enabled>false</enabled> -->
+		<!-- </snapshots> -->
+		<!-- </repository> -->
+		<repository>
+			<id>play-private.release</id>
+			<url>http://maven.petalslink.com/private-play-release</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>play-private.snapshot</id>
+			<url>http://maven.petalslink.com/private-play-snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+		<repository>
+			<id>petalslink-public.release</id>
+			<name>PetalsLink Public Repository</name>
+			<url>http://maven.petalslink.com/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>petalslink-public.snapshot</id>
+			<name>PetalsLink Snapshot Public Repository</name>
+			<url>http://maven.petalslink.com/public-snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>petalslink-public.others</id>
+			<url>http://maven.petalslink.com/others</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>sonatype-nexus-snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>semweb4j-repo</id>
+			<name>FZI Maven Repository</name>
+			<url>http://mavenrepo.fzi.de/semweb4j.org/repo</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>semweb4j-snapshots</id>
+			<name>FZI Maven Snapshot Repository</name>
+			<url>http://mavenrepo.fzi.de/semweb4j.org/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>apache-snapshots</id>
+			<name>apache-snapshots</name>
+			<url>https://repository.apache.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
-  <repositories>
-    <repository>
-      <id>petalslink-public.release</id>
-      <name>PetalsLink Public Repository</name>
-      <url>http://maven.petalslink.com/public</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>petalslink-public.snapshot</id>
-      <name>PetalsLink Snapshot Public Repository</name>
-      <url>http://maven.petalslink.com/public-snapshot</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>ebmws-public.research</id>
-      <url>http://maven.petalslink.com/public-research</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>petalslink-public.others</id>
-      <url>http://maven.petalslink.com/others</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>ow2-public.release</id>
-      <name>OW2 Public Repository</name>
-      <url>http://maven.ow2.org/maven2</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>ow2-public.snapshot</id>
-      <name>OW2 Snapshot Repository</name>
-      <url>http://maven.ow2.org/maven2-snapshot</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>ow2.release</id>
-      <name>OW2 Repository</name>
-      <url>http://repository.ow2.org/nexus/content/repositories/releases/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>ow2.snapshot</id>
-      <name>OW2 Snap Repository</name>
-      <url>http://repository.ow2.org/nexus/content/repositories/snapshots/</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>petalslink-public.snapshot.plugin</id>
-      <name>PetalsLink plugin Repository</name>
-      <url>http://maven.petalslink.com/public-snapshot</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>petalslink-public.release.plugin</id>
-      <name>PetalsLink plugin release Repository</name>
-      <url>http://maven.petalslink.com/public</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>petalslink-public.others.plugin</id>
-      <name>PetalsLink plugin others Repository</name>
-      <url>http://maven.petalslink.com/others</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven2-repository.dev.java.net</id>
+			<url>http://download.java.net/maven/2</url>
+		</pluginRepository>
+	</pluginRepositories>
 
-  <dependencies>
-    <dependency>
-      <groupId>findbugs</groupId>
-      <artifactId>annotations</artifactId>
-      <version>1.0.0</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.sf.saxon</groupId>
+				<artifactId>saxonhe</artifactId>
+				<version>9.2.0.6</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.10</version>
+			</dependency>
+			<dependency>
+				<groupId>xmlunit</groupId>
+				<artifactId>xmlunit</artifactId>
+				<version>1.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jvnet.jaxb2_commons</groupId>
+				<artifactId>runtime</artifactId>
+				<version>0.4.1.5</version>
+			</dependency>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>3.8.1</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.easymock</groupId>
-        <artifactId>easymock</artifactId>
-        <version>2.2</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.easymock</groupId>
-        <artifactId>easymockclassextension</artifactId>
-        <version>2.2</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>log4j</groupId>
-        <artifactId>log4j</artifactId>
-        <version>1.2.13</version>
-      </dependency>
-      <dependency>
-        <groupId>commons-lang</groupId>
-        <artifactId>commons-lang</artifactId>
-        <version>2.1</version>
-      </dependency>
-      <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>1.2</version>
-      </dependency>
-      <dependency>
-        <groupId>commons-logging</groupId>
-        <artifactId>commons-logging</artifactId>
-        <version>1.0.4</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.cxf</groupId>
-        <artifactId>cxf-bundle-minimal</artifactId>
-        <version>${cxf.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+			<!-- Schema and Wsdl reader -->
+			<dependency>
+				<artifactId>easywsdl-wsdl</artifactId>
+				<groupId>org.ow2.easywsdl</groupId>
+				<version>2.3</version>
+			</dependency>
 
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.1</version>
-          <configuration>
-            <autoVersionSubmodules>true</autoVersionSubmodules>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>2.2</version>
-          <configuration>
-            <archive>
-              <manifest>
-                <addClasspath>true</addClasspath>
-                <addExtensions />
-                <classpathPrefix />
-              </manifest>
-              <manifestEntries>
-                <mode>development</mode>
-                <url>${pom.url}</url>
-                <SCM-Revision>${buildNumber}</SCM-Revision>
-                <Build-Date />
-              </manifestEntries>
-            </archive>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.3.2</version>
-          <configuration>
-            <source>1.5</source>
-            <target>1.5</target>
-            <showDeprecation>true</showDeprecation>
-            <showWarnings>
-              ${java.compiler.showWarnings}
-            </showWarnings>
-            <fork>false</fork>
-            <debug>${java.compiler.debug}</debug>
-            <optimize>${java.compiler.optimize}</optimize>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-eclipse-plugin</artifactId>
-        <version>2.7</version>
-        <configuration>
-          <addGroupIdToProjectName>true</addGroupIdToProjectName>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.7</version>
-        <configuration>
-          <links>
-            <link>http://ow2.org</link>
-          </links>
-        </configuration>
-      </plugin>
-    </plugins>
-  </reporting>
+			<!-- BPEL reader -->
+			<dependency>
+				<artifactId>easybpel.model.bpel.tools.validator</artifactId>
+				<groupId>com.ebmwebsourcing.easybpel</groupId>
+				<version>1.3</version>
+			</dependency>
+
+			<!-- BPMN reader -->
+			<dependency>
+				<artifactId>bpmn20-impl</artifactId>
+				<groupId>com.ebmwebsourcing.easybpmn</groupId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+
+			<!-- Topic Reader -->
+			<dependency>
+				<artifactId>ws-notification-service</artifactId>
+				<groupId>com.ebmwebsourcing.wsstar</groupId>
+				<version>1.2</version>
+			</dependency>
+
+			<!-- Jena and ARQ must be matching between Event Cloud and EP-SPARQL -->
+			<dependency>
+				<groupId>org.apache.jena</groupId>
+				<artifactId>jena-arq</artifactId>
+				<version>2.9.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.jena</groupId>
+				<artifactId>jena-core</artifactId>
+				<version>2.7.4</version>
+			</dependency>
+
+			<!-- Eventcloud versions -->
+			<dependency>
+				<groupId>fr.inria.eventcloud</groupId>
+				<artifactId>eventcloud-core</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.inria.eventcloud</groupId>
+				<artifactId>eventcloud-api</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.inria.eventcloud</groupId>
+				<artifactId>eventcloud-adapters-rdf2go</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.inria.eventcloud</groupId>
+				<artifactId>eventcloud-utils-trigwriter</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+			
+			<!-- PLAY Commons -->
+			<dependency>
+				<groupId>eu.play-project</groupId>
+				<artifactId>play-commons-eventtypes</artifactId>
+				<version>1.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.play-project</groupId>
+				<artifactId>play-commons-eventformat</artifactId>
+				<version>1.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.play-project</groupId>
+				<artifactId>play-commons-constants</artifactId>
+				<version>1.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<!-- <plugin> -->
+			<!-- <groupId>org.apache.maven.plugins</groupId> -->
+			<!-- <artifactId>maven-enforcer-plugin</artifactId> -->
+			<!-- <dependencies> -->
+			<!-- <dependency> -->
+			<!-- <groupId>com.ebmwebsourcing.enforcer</groupId> -->
+			<!-- <artifactId>enforcer-rules</artifactId> -->
+			<!-- <version>1.0-SNAPSHOT</version> -->
+			<!-- </dependency> -->
+			<!-- </dependencies> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <id>enforce-corporate-pom-rules</id> -->
+			<!-- <goals> -->
+			<!-- <goal>enforce</goal> -->
+			<!-- </goals> -->
+			<!-- <configuration> -->
+			<!-- <rules> -->
+			<!-- <requireProperty> -->
+			<!-- <property>eclipse.shortGroupId</property> -->
+			<!-- <message>"Property eclipse.shortGroupId must be defined!"</message> -->
+			<!-- </requireProperty> -->
+			<!-- <projectNameEqualsArtifactId implementation="com.ebmwebsourcing.enforcerrules.ProjectNameEqualsArtifactId" 
+				/> -->
+			<!-- <projectBaseDirEndsWithProjectName implementation="com.ebmwebsourcing.enforcerrules.ProjectDirectoryMustBeEqualToProjectName" 
+				/> -->
+			<!-- </rules> -->
+			<!-- <fail>true</fail> -->
+			<!-- </configuration> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- </plugin> -->
+			<!-- <plugin> -->
+			<!-- <groupId>org.codehaus.mojo</groupId> -->
+			<!-- <artifactId>buildnumber-maven-plugin</artifactId> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <phase>validate</phase> -->
+			<!-- <goals> -->
+			<!-- <goal>create</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- <configuration> -->
+			<!-- <format>{0,date,yyyy-MM-dd HH:mm:ss}</format> -->
+			<!-- <items> -->
+			<!-- <item>timestamp</item> -->
+			<!-- </items> -->
+			<!-- <doCheck>false</doCheck> -->
+			<!-- <doUpdate>false</doUpdate> -->
+			<!-- <revisionOnScmFailure>undefined</revisionOnScmFailure> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
+		</plugins>
+
+		<pluginManagement>
+			<!-- CAUTION : no execution should be defined here : 1) it is not a proper 
+				place 2) it modifies whole lifecycle -->
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<showDeprecation>true</showDeprecation>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<executions>
+						<execution>
+							<goals>
+								<goal>test-jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. :stuehmer -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-resources-plugin</artifactId>
+										<versionRange>[2.0,)</versionRange>
+										<goals>
+											<goal>resources</goal>
+											<goal>testResources</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+
+				<!-- <plugin> -->
+				<!-- <groupId>org.apache.maven.plugins</groupId> -->
+				<!-- <artifactId>maven-surefire-plugin</artifactId> -->
+				<!-- <configuration> -->
+				<!-- <enableAssertions>true</enableAssertions> -->
+				<!-- <systemProperties> -->
+				<!-- <property> -->
+				<!-- <name>java.util.logging.manager</name> -->
+				<!-- <value>com.ebmwebsourcing.easycommons.logger.LogManager</value> -->
+				<!-- </property> -->
+				<!-- </systemProperties> -->
+				<!-- <includes> -->
+				<!-- <include>**/*Test*.java</include> -->
+				<!-- </includes> -->
+				<!-- <excludes> -->
+				<!-- <exclude>**/Abstract*.java</exclude> -->
+				<!-- </excludes> -->
+				<!-- </configuration> -->
+				<!-- </plugin> -->
+				<plugin>
+					<groupId>org.jvnet.jaxb2.maven2</groupId>
+					<artifactId>maven-jaxb2-plugin</artifactId>
+					<version>0.7.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<configuration>
+						<projectNameTemplate>${eclipse.shortGroupId}.[artifactId]</projectNameTemplate>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<!-- Added to use SCP with Maven deploy, needed for the FZI repository 
+			:stuehmer -->
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh</artifactId>
+				<version>1.0-beta-6</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.5.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
 
   <profiles>
     <profile>
@@ -395,9 +557,11 @@
       </build>
     </profile>
   </profiles>
+  
   <scm>
     <connection>scm:git:git@github.com:play-project/play-parent.git</connection>
     <developerConnection>scm:git:git@github.com:play-project/play-parent.git</developerConnection>
     <url>http://github.com/play-project/play-parent</url>
   </scm>
+
 </project>
