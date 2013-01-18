@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
 	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <artifactId>ow2</artifactId>
-    <groupId>org.ow2</groupId>
-    <version>1.5</version> 
-  </parent>
+	<parent>
+		<artifactId>ow2</artifactId>
+		<groupId>org.ow2</groupId>
+		<version>1.5</version>
+	</parent>
 
 	<name>play-parent</name>
 	<artifactId>play-parent</artifactId>
@@ -16,43 +17,43 @@
 	<version>1.0-SNAPSHOT</version>
 
 	<description>
-    PLAY will revolutionize the way People, Things and Services will cooperate and coexist in the Future Internet, by introducing ubiquity in the communication and proactivity in handling large scale distributed environments.
-  </description>
-	
-  <url>http://play.ow2.org</url>
+    	PLAY will revolutionize the way People, Things and Services will cooperate and coexist in the Future Internet, by introducing ubiquity in the communication and proactivity in handling large scale distributed environments.
+  	</description>
+
+	<url>http://play.ow2.org</url>
 
 	<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <cobertura.version>2.0-beta1</cobertura.version>
-    <site.version>2.3</site.version>
-    <mprojectinfo.version>2.0-beta-3</mprojectinfo.version>
-    <umlgraph.version>4.6</umlgraph.version>
-    <cxf.version>2.5.0</cxf.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<cobertura.version>2.0-beta1</cobertura.version>
+		<site.version>2.3</site.version>
+		<mprojectinfo.version>2.0-beta-3</mprojectinfo.version>
+		<umlgraph.version>4.6</umlgraph.version>
+		<cxf.version>2.5.0</cxf.version>
 		<eclipse.shortGroupId>play</eclipse.shortGroupId>
 	</properties>
-  
+
 	<prerequisites>
 		<maven>2.2.1</maven>
 	</prerequisites>
-  
-  <mailingLists>
-    <mailingList>
-      <name>PLAY Mailing List</name>
-      <subscribe>play-dev-subscribe@ow2.org</subscribe>
-      <post>play-dev@ow2.org</post>
-      <unsubscribe>play-dev-unsubscribe@ow2.org</unsubscribe>
-      <archive>http://lists.petalslink.org/pipermail/petalsdsb/</archive>
-    </mailingList>
-  </mailingLists>
 
-  <ciManagement>
-    <system>Bamboo</system>
-    <url>http://bamboo.ow2.org</url>
-  </ciManagement>
+	<mailingLists>
+		<mailingList>
+			<name>PLAY Mailing List</name>
+			<subscribe>play-dev-subscribe@ow2.org</subscribe>
+			<post>play-dev@ow2.org</post>
+			<unsubscribe>play-dev-unsubscribe@ow2.org</unsubscribe>
+			<archive>http://lists.petalslink.org/pipermail/petalsdsb/</archive>
+		</mailingList>
+	</mailingLists>
 
-  <issueManagement>
-    <url>http://jira.ow2.org/browse/PLAY</url>
-  </issueManagement>
+	<ciManagement>
+		<system>Bamboo</system>
+		<url>http://bamboo.ow2.org</url>
+	</ciManagement>
+
+	<issueManagement>
+		<url>http://jira.ow2.org/browse/PLAY</url>
+	</issueManagement>
 
 	<licenses>
 		<license>
@@ -63,36 +64,62 @@
 	</licenses>
 
 	<!-- TODO: to be updated by each developer to put his name -->
-  <developers>
-    <developer>
-      <name>Christophe Hamerling</name>
-      <id>chamerling</id>
-      <email>chamerling@linagora.com</email>
-      <url>http://chamerling.org</url>
-      <organization>Linagora</organization>
-      <organizationUrl>
-        http://www.linagora.com
-      </organizationUrl>
-      <roles>
-        <role>Developer</role>
-        <role>Architect</role>
-      </roles>
-      <timezone>+1</timezone>
-    </developer>
+	<developers>
 		<developer>
-			<id>team</id>
-			<name>Play Project</name>
-			<email>play-project@fzi.de</email>
-			<url>http://www.play-project.eu/</url>
-			<organization>Play Project</organization>
-			<organizationUrl>http://www.play-project.eu/</organizationUrl>
+			<name>Christophe Hamerling</name>
+			<id>chamerling</id>
+			<email>chamerling@linagora.com</email>
+			<url>http://chamerling.org</url>
+			<organization>Linagora</organization>
+			<organizationUrl>
+        		http://www.linagora.com
+      		</organizationUrl>
 			<roles>
-				<role>architect</role>
-				<role>developer</role>
+				<role>Developer</role>
+				<role>Architect</role>
 			</roles>
 			<timezone>+1</timezone>
 		</developer>
-  </developers>
+		<developer>
+			<id>team</id>
+			<name>PLAY Project</name>
+			<email>partners@play-project.eu</email>
+			<url>http://www.play-project.eu/</url>
+			<organization>PLAY Project</organization>
+			<organizationUrl>http://www.play-project.eu/</organizationUrl>
+			<roles>
+				<role>Architect</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+		<developer>
+			<name>Stefan Obermier</name>
+			<id>sobermeier</id>
+			<organization>FZI</organization>
+			<organizationUrl>
+        		http://www.fzi.de/
+      		</organizationUrl>
+			<roles>
+				<role>Developer</role>
+				<role>Architect</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+		<developer>
+			<name>Roland Stühmer</name>
+			<id>stuehmer</id>
+			<organization>FZI</organization>
+			<organizationUrl>
+        		http://www.fzi.de/
+      		</organizationUrl>
+			<roles>
+				<role>Developer</role>
+				<role>Architect</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
 
 	<dependencies>
 		<dependency>
@@ -311,7 +338,7 @@
 				<artifactId>eventcloud-utils-trigwriter</artifactId>
 				<version>1.2.1</version>
 			</dependency>
-			
+
 			<!-- PLAY Commons -->
 			<dependency>
 				<groupId>eu.play-project</groupId>
@@ -509,59 +536,59 @@
 		</plugins>
 	</reporting>
 
-  <profiles>
-    <profile>
-      <id>dev</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <java.compiler.showWarnings>true</java.compiler.showWarnings>
-        <java.compiler.debug>true</java.compiler.debug>
-        <java.compiler.optimize>false</java.compiler.optimize>
-      </properties>
-    </profile>
-    <profile>
-      <id>release</id>
-      <activation>
-        <!-- Automatically activated by the release plugin -->
-        <property>
-          <name>performRelease</name>
-          <value>true</value>
-        </property>
-      </activation>
-      <properties>
-        <java.compiler.showWarnings>
-          false
-        </java.compiler.showWarnings>
-        <java.compiler.debug>false</java.compiler.debug>
-        <java.compiler.optimize>true</java.compiler.optimize>
-      </properties>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.4</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-  
-  <scm>
-    <connection>scm:git:git@github.com:play-project/play-parent.git</connection>
-    <developerConnection>scm:git:git@github.com:play-project/play-parent.git</developerConnection>
-    <url>http://github.com/play-project/play-parent</url>
-  </scm>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<java.compiler.showWarnings>true</java.compiler.showWarnings>
+				<java.compiler.debug>true</java.compiler.debug>
+				<java.compiler.optimize>false</java.compiler.optimize>
+			</properties>
+		</profile>
+		<profile>
+			<id>release</id>
+			<activation>
+				<!-- Automatically activated by the release plugin -->
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<properties>
+				<java.compiler.showWarnings>
+					false
+				</java.compiler.showWarnings>
+				<java.compiler.debug>false</java.compiler.debug>
+				<java.compiler.optimize>true</java.compiler.optimize>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.4</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<scm>
+		<connection>scm:git:git@github.com:play-project/play-parent.git</connection>
+		<developerConnection>scm:git:git@github.com:play-project/play-parent.git</developerConnection>
+		<url>http://github.com/play-project/play-parent</url>
+	</scm>
 
 </project>
