@@ -52,7 +52,9 @@
 	</ciManagement>
 
 	<issueManagement>
-		<url>http://jira.ow2.org/browse/PLAY</url>
+		<system>GitHub Issues</system>
+		<url>https://github.com/play-project/play/issues?labels=&page=1&state=open</url>
+		<!--<url>http://jira.ow2.org/browse/PLAY</url>-->
 	</issueManagement>
 
 	<licenses>
