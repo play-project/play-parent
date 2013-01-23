@@ -38,17 +38,16 @@
 
 	<mailingLists>
 		<mailingList>
-			<name>PLAY Mailing List</name>
+			<name>PLAY Developers Mailing List</name>
 			<subscribe>play-dev-subscribe@ow2.org</subscribe>
 			<post>play-dev@ow2.org</post>
 			<unsubscribe>play-dev-unsubscribe@ow2.org</unsubscribe>
-			<archive>http://lists.petalslink.org/pipermail/petalsdsb/</archive>
 		</mailingList>
 	</mailingLists>
 
 	<ciManagement>
 		<system>Bamboo</system>
-		<url>http://bamboo.ow2.org</url>
+		<url>http://bamboo.ow2.org/browse/PLAY</url>
 	</ciManagement>
 
 	<issueManagement>
