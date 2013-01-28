@@ -142,36 +142,6 @@
 	</dependencies>
 
 	<repositories>
-		<!-- <repository> -->
-		<!-- <id>maven-central</id> -->
-		<!-- <url>http://central.maven.org/maven2/</url> -->
-		<!-- <releases> -->
-		<!-- <enabled>true</enabled> -->
-		<!-- </releases> -->
-		<!-- <snapshots> -->
-		<!-- <enabled>false</enabled> -->
-		<!-- </snapshots> -->
-		<!-- </repository> -->
-		<repository>
-			<id>play-private.release</id>
-			<url>http://maven.petalslink.com/private-play-release</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>play-private.snapshot</id>
-			<url>http://maven.petalslink.com/private-play-snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
 		<repository>
 			<id>maven2-repository.dev.java.net</id>
 			<url>http://download.java.net/maven/2</url>
@@ -187,7 +157,7 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-		<repository>
+ 		<repository>
 			<id>petalslink-public.snapshot</id>
 			<name>PetalsLink Snapshot Public Repository</name>
 			<url>http://maven.petalslink.com/public-snapshot</url>
@@ -196,16 +166,6 @@
 			</snapshots>
 			<releases>
 				<enabled>false</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>petalslink-public.others</id>
-			<url>http://maven.petalslink.com/others</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
 			</releases>
 		</repository>
 		<repository>
