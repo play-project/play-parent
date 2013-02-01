@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -14,7 +12,7 @@
 	<artifactId>play-parent</artifactId>
 	<groupId>org.ow2.play</groupId>
 	<packaging>pom</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 
 	<description>
     	PLAY will revolutionize the way People, Things and Services will cooperate and coexist in the Future Internet, by introducing ubiquity in the communication and proactivity in handling large scale distributed environments.
@@ -346,10 +344,8 @@
 			<!-- <property>eclipse.shortGroupId</property> -->
 			<!-- <message>"Property eclipse.shortGroupId must be defined!"</message> -->
 			<!-- </requireProperty> -->
-			<!-- <projectNameEqualsArtifactId implementation="com.ebmwebsourcing.enforcerrules.ProjectNameEqualsArtifactId" 
-				/> -->
-			<!-- <projectBaseDirEndsWithProjectName implementation="com.ebmwebsourcing.enforcerrules.ProjectDirectoryMustBeEqualToProjectName" 
-				/> -->
+			<!-- <projectNameEqualsArtifactId implementation="com.ebmwebsourcing.enforcerrules.ProjectNameEqualsArtifactId" /> -->
+			<!-- <projectBaseDirEndsWithProjectName implementation="com.ebmwebsourcing.enforcerrules.ProjectDirectoryMustBeEqualToProjectName" /> -->
 			<!-- </rules> -->
 			<!-- <fail>true</fail> -->
 			<!-- </configuration> -->
@@ -544,6 +540,7 @@
 		<connection>scm:git:git@github.com:play-project/play-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:play-project/play-parent.git</developerConnection>
 		<url>http://github.com/play-project/play-parent</url>
-	</scm>
+	  <tag>1.0</tag>
+  </scm>
 
 </project>
