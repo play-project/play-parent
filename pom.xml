@@ -12,7 +12,7 @@
 	<artifactId>play-parent</artifactId>
 	<groupId>org.ow2.play</groupId>
 	<packaging>pom</packaging>
-	<version>1.1</version>
+	<version>1.2-SNAPSHOT</version>
 
 	<description>
     	PLAY will revolutionize the way People, Things and Services will cooperate and coexist in the Future Internet, by introducing ubiquity in the communication and proactivity in handling large scale distributed environments.
@@ -551,7 +551,7 @@
 		<connection>scm:git:git@github.com:play-project/play-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:play-project/play-parent.git</developerConnection>
 		<url>http://github.com/play-project/play-parent</url>
-	  <tag>play-parent-1.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 </project>
