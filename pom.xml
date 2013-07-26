@@ -28,8 +28,8 @@
 		<umlgraph.version>4.6</umlgraph.version>
 		<cxf.version>2.5.4</cxf.version>
 		<eclipse.shortGroupId>play</eclipse.shortGroupId>
-		<eventcloud.version>1.4.0</eventcloud.version>
-    <guava.version>13.0.1</guava.version>
+		<eventcloud.version>1.5.1</eventcloud.version>
+		<guava.version>13.0.1</guava.version>
 	</properties>
 
 	<prerequisites>
