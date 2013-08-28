@@ -333,6 +333,29 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<!-- Bump the enforcer version number which was too old in ow2 pom :stuehmer -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>1.3.1</version>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,)</version>
+									<message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures
+										and checksums respectively.</message>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<!-- <plugin> -->
 			<!-- <groupId>org.apache.maven.plugins</groupId> -->
 			<!-- <artifactId>maven-enforcer-plugin</artifactId> -->
@@ -551,7 +574,7 @@
 		<connection>scm:git:git@github.com:play-project/play-parent.git</connection>
 		<developerConnection>scm:git:git@github.com:play-project/play-parent.git</developerConnection>
 		<url>http://github.com/play-project/play-parent</url>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
 </project>
