@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -15,8 +17,8 @@
 	<version>1.2-SNAPSHOT</version>
 
 	<description>
-    	PLAY will revolutionize the way People, Things and Services will cooperate and coexist in the Future Internet, by introducing ubiquity in the communication and proactivity in handling large scale distributed environments.
-  	</description>
+		PLAY will revolutionize the way People, Things and Services will cooperate and coexist in the Future Internet, by introducing ubiquity in the communication and proactivity in handling large scale distributed environments.
+	</description>
 
 	<url>http://play.ow2.org</url>
 
@@ -27,8 +29,9 @@
 		<mprojectinfo.version>2.0-beta-3</mprojectinfo.version>
 		<umlgraph.version>4.6</umlgraph.version>
 		<cxf.version>2.5.4</cxf.version>
+		<jersey.version>2.3.1</jersey.version>
 		<eclipse.shortGroupId>play</eclipse.shortGroupId>
-		<eventcloud.version>1.5.1</eventcloud.version>
+		<eventcloud.version>1.6.0-SNAPSHOT</eventcloud.version>
 		<guava.version>13.0.1</guava.version>
 	</properties>
 
@@ -53,7 +56,7 @@
 	<issueManagement>
 		<system>GitHub Issues</system>
 		<url>https://github.com/play-project/play/issues?labels=;page=1;state=open</url>
-		<!--<url>http://jira.ow2.org/browse/PLAY</url>-->
+		<!--<url>http://jira.ow2.org/browse/PLAY</url> -->
 	</issueManagement>
 
 	<licenses>
@@ -78,8 +81,8 @@
 			<url>http://chamerling.org</url>
 			<organization>Linagora</organization>
 			<organizationUrl>
-        		http://www.linagora.com
-      		</organizationUrl>
+				http://www.linagora.com
+			</organizationUrl>
 			<roles>
 				<role>Developer</role>
 				<role>Architect</role>
@@ -104,8 +107,8 @@
 			<id>sobermeier</id>
 			<organization>FZI</organization>
 			<organizationUrl>
-        		http://www.fzi.de/
-      		</organizationUrl>
+				http://www.fzi.de/
+			</organizationUrl>
 			<roles>
 				<role>Developer</role>
 				<role>Architect</role>
@@ -117,8 +120,8 @@
 			<id>stuehmer</id>
 			<organization>FZI</organization>
 			<organizationUrl>
-        		http://www.fzi.de/
-      		</organizationUrl>
+				http://www.fzi.de/
+			</organizationUrl>
 			<roles>
 				<role>Developer</role>
 				<role>Architect</role>
@@ -156,7 +159,7 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
- 		<repository>
+		<repository>
 			<id>petalslink-public.snapshot</id>
 			<name>PetalsLink Snapshot Public Repository</name>
 			<url>http://maven.petalslink.com/public-snapshot</url>
@@ -222,6 +225,13 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.glassfish.jersey</groupId>
+				<artifactId>jersey-bom</artifactId>
+				<version>${jersey.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 			<dependency>
 				<groupId>net.sf.saxon</groupId>
 				<artifactId>saxonhe</artifactId>
@@ -309,16 +319,16 @@
 				<artifactId>eventcloud-webservices-core</artifactId>
 				<version>${eventcloud.version}</version>
 			</dependency>
-  		<dependency>
-  			<groupId>com.google.guava</groupId>
-  			<artifactId>guava</artifactId>
-  			<version>${guava.version}</version>
-  		</dependency>
-  		<dependency>
-  			<groupId>org.apache.cxf</groupId>
-  			<artifactId>cxf-bundle-minimal</artifactId>
-  			<version>${cxf.version}</version>
-  		</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-bundle-minimal</artifactId>
+				<version>${cxf.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -378,8 +388,10 @@
 			<!-- <property>eclipse.shortGroupId</property> -->
 			<!-- <message>"Property eclipse.shortGroupId must be defined!"</message> -->
 			<!-- </requireProperty> -->
-			<!-- <projectNameEqualsArtifactId implementation="com.ebmwebsourcing.enforcerrules.ProjectNameEqualsArtifactId" /> -->
-			<!-- <projectBaseDirEndsWithProjectName implementation="com.ebmwebsourcing.enforcerrules.ProjectDirectoryMustBeEqualToProjectName" /> -->
+			<!-- <projectNameEqualsArtifactId implementation="com.ebmwebsourcing.enforcerrules.ProjectNameEqualsArtifactId" 
+				/> -->
+			<!-- <projectBaseDirEndsWithProjectName implementation="com.ebmwebsourcing.enforcerrules.ProjectDirectoryMustBeEqualToProjectName" 
+				/> -->
 			<!-- </rules> -->
 			<!-- <fail>true</fail> -->
 			<!-- </configuration> -->
