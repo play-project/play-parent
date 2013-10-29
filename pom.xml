@@ -31,7 +31,7 @@
 		<cxf.version>2.5.4</cxf.version>
 		<jersey.version>2.3.1</jersey.version>
 		<eclipse.shortGroupId>play</eclipse.shortGroupId>
-		<eventcloud.version>1.6.0-SNAPSHOT</eventcloud.version>
+		<eventcloud.version>1.7.0-SNAPSHOT</eventcloud.version>
 		<guava.version>13.0.1</guava.version>
 		<log4j.version>1.2.17</log4j.version>
 		<logback.version>1.0.13</logback.version>
