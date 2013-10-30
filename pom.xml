@@ -284,7 +284,7 @@
 				<version>1.2</version>
 			</dependency>
 
-			<!-- Jena and ARQ must be matching between Event Cloud and EP-SPARQL -->
+			<!-- Jena and ARQ must be matching between Event Cloud and BDPL -->
 			<dependency>
 				<groupId>org.apache.jena</groupId>
 				<artifactId>jena-arq</artifactId>
