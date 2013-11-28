@@ -396,59 +396,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.apache.maven.plugins</groupId> -->
-			<!-- <artifactId>maven-enforcer-plugin</artifactId> -->
-			<!-- <dependencies> -->
-			<!-- <dependency> -->
-			<!-- <groupId>com.ebmwebsourcing.enforcer</groupId> -->
-			<!-- <artifactId>enforcer-rules</artifactId> -->
-			<!-- <version>1.0-SNAPSHOT</version> -->
-			<!-- </dependency> -->
-			<!-- </dependencies> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <id>enforce-corporate-pom-rules</id> -->
-			<!-- <goals> -->
-			<!-- <goal>enforce</goal> -->
-			<!-- </goals> -->
-			<!-- <configuration> -->
-			<!-- <rules> -->
-			<!-- <requireProperty> -->
-			<!-- <property>eclipse.shortGroupId</property> -->
-			<!-- <message>"Property eclipse.shortGroupId must be defined!"</message> -->
-			<!-- </requireProperty> -->
-			<!-- <projectNameEqualsArtifactId implementation="com.ebmwebsourcing.enforcerrules.ProjectNameEqualsArtifactId"
-				/> -->
-			<!-- <projectBaseDirEndsWithProjectName implementation="com.ebmwebsourcing.enforcerrules.ProjectDirectoryMustBeEqualToProjectName"
-				/> -->
-			<!-- </rules> -->
-			<!-- <fail>true</fail> -->
-			<!-- </configuration> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- </plugin> -->
-			<!-- <plugin> -->
-			<!-- <groupId>org.codehaus.mojo</groupId> -->
-			<!-- <artifactId>buildnumber-maven-plugin</artifactId> -->
-			<!-- <executions> -->
-			<!-- <execution> -->
-			<!-- <phase>validate</phase> -->
-			<!-- <goals> -->
-			<!-- <goal>create</goal> -->
-			<!-- </goals> -->
-			<!-- </execution> -->
-			<!-- </executions> -->
-			<!-- <configuration> -->
-			<!-- <format>{0,date,yyyy-MM-dd HH:mm:ss}</format> -->
-			<!-- <items> -->
-			<!-- <item>timestamp</item> -->
-			<!-- </items> -->
-			<!-- <doCheck>false</doCheck> -->
-			<!-- <doUpdate>false</doUpdate> -->
-			<!-- <revisionOnScmFailure>undefined</revisionOnScmFailure> -->
-			<!-- </configuration> -->
-			<!-- </plugin> -->
 		</plugins>
 
 		<pluginManagement>
@@ -514,26 +461,6 @@
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>2.6</version>
 				</plugin>
-
-				<!-- <plugin> -->
-				<!-- <groupId>org.apache.maven.plugins</groupId> -->
-				<!-- <artifactId>maven-surefire-plugin</artifactId> -->
-				<!-- <configuration> -->
-				<!-- <enableAssertions>true</enableAssertions> -->
-				<!-- <systemProperties> -->
-				<!-- <property> -->
-				<!-- <name>java.util.logging.manager</name> -->
-				<!-- <value>com.ebmwebsourcing.easycommons.logger.LogManager</value> -->
-				<!-- </property> -->
-				<!-- </systemProperties> -->
-				<!-- <includes> -->
-				<!-- <include>**/*Test*.java</include> -->
-				<!-- </includes> -->
-				<!-- <excludes> -->
-				<!-- <exclude>**/Abstract*.java</exclude> -->
-				<!-- </excludes> -->
-				<!-- </configuration> -->
-				<!-- </plugin> -->
 				<plugin>
 					<groupId>org.jvnet.jaxb2.maven2</groupId>
 					<artifactId>maven-jaxb2-plugin</artifactId>
@@ -546,6 +473,11 @@
 					<configuration>
 						<projectNameTemplate>${eclipse.shortGroupId}.[artifactId]</projectNameTemplate>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>		
 				</plugin>
 			</plugins>
 		</pluginManagement>
