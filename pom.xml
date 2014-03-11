@@ -148,30 +148,15 @@
 
 	<repositories>
 		<repository>
-			<id>maven2-repository.dev.java.net</id>
-			<url>http://download.java.net/maven/2</url>
-		</repository>
-		<repository>
 			<id>petalslink-public.release</id>
 			<name>PetalsLink Public Repository</name>
-			<url>http://maven.petalslink.com/public</url>
+			<url>http://maven.petalslink.com/repo</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-		</repository>
-		<repository>
-			<id>petalslink-public.snapshot</id>
-			<name>PetalsLink Snapshot Public Repository</name>
-			<url>http://maven.petalslink.com/public-snapshot</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
 		</repository>
 		<repository>
 			<id>sonatype-nexus-snapshots</id>
@@ -218,13 +203,6 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven2-repository.dev.java.net</id>
-			<url>http://download.java.net/maven/2</url>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<dependencyManagement>
 		<dependencies>
