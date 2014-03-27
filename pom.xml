@@ -170,6 +170,28 @@
 			</releases>
 		</repository>
 		<repository>
+			<id>semweb4j-repo</id>
+			<name>FZI Maven Repository</name>
+			<url>http://mavenrepo.fzi.de/semweb4j.org/repo</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>semweb4j-snapshots</id>
+			<name>FZI Maven Snapshot Repository</name>
+			<url>http://mavenrepo.fzi.de/semweb4j.org/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
 			<id>apache-snapshots</id>
 			<name>apache-snapshots</name>
 			<url>https://repository.apache.org/content/repositories/snapshots</url>
