@@ -8,6 +8,7 @@
 		<artifactId>ow2</artifactId>
 		<groupId>org.ow2</groupId>
 		<version>1.5</version>
+		<relativePath /> <!-- unset the default -->
 	</parent>
 
 	<name>play-parent</name>
